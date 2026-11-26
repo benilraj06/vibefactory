@@ -1,0 +1,285 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Vibe Factory — Vibe-coded Android & PWA apps</title>
+  <meta name="description" content="Vibe Factory builds vibe-coded Android apps and Progressive Web Apps. Tell us the vibe, we ship the app.">
+  <meta name="theme-color" content="#000000">
+  <meta property="og:title" content="Vibe Factory — Vibe-coded Android & PWA apps">
+  <meta property="og:description" content="Tell us the vibe. We ship the app.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="assets/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/icon-192.png">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=JetBrains+Mono:wght@400;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="cursor" aria-hidden="true"></div>
+
+  <header class="nav">
+    <a class="logo" href="#top" aria-label="Vibe Factory home">
+      <span class="logo-mark">V</span><span>VIBE<b>/</b>FACTORY</span>
+    </a>
+    <nav class="nav-links" aria-label="Main">
+      <a href="#machine">Vibe Machine</a>
+      <a href="#services">Services</a>
+      <a href="#process">Process</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <button class="invert-btn" id="invertBtn" aria-label="Invert colours" title="Invert the vibe">
+      <span class="invert-dot"></span>
+    </button>
+  </header>
+
+  <main id="top">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="pulse"></span> Android · PWA · Vibe-coded</p>
+        <h1 class="hero-title">
+          <span class="line">From <em>vibe</em></span>
+          <span class="line">to <span class="scramble" data-words="app store.|home screen.|production.|your pocket.">app store.</span></span>
+        </h1>
+        <p class="hero-sub">
+          Vibe Factory turns rough ideas into real, installable apps — native-feeling
+          Android builds and lightning-fast Progressive Web Apps — using an AI-first,
+          vibe-coding workflow that ships in days, not quarters.
+        </p>
+        <div class="hero-cta">
+          <a class="btn btn-solid magnetic" href="#machine">Try the Vibe Machine <span aria-hidden="true">→</span></a>
+          <a class="btn btn-ghost magnetic" href="#contact">Start a project</a>
+        </div>
+      </div>
+
+      <div class="hero-badge" aria-hidden="true">
+        <svg viewBox="0 0 200 200" class="badge-ring">
+          <defs><path id="circle" d="M100,100 m-78,0 a78,78 0 1,1 156,0 a78,78 0 1,1 -156,0"/></defs>
+          <text textLength="486" lengthAdjust="spacing"><textPath href="#circle" textLength="486">VIBE CODED ✦ SHIPPED FAST ✦ ANDROID ✦ PWA ✦ </textPath></text>
+        </svg>
+        <div class="badge-core">
+          <svg viewBox="0 0 512 512"><path d="M128 150h68l60 168 60-168h68L292 382h-72z" fill="currentColor"/><circle cx="384" cy="382" r="26" fill="currentColor"/></svg>
+        </div>
+      </div>
+
+      <a href="#machine" class="scroll-hint" aria-label="Scroll down">
+        <span>scroll</span><i></i>
+      </a>
+    </section>
+
+    <!-- MARQUEE -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <span>Vibe coded</span><b>✦</b><span>Android native</span><b>✦</b><span>Progressive Web Apps</span><b>✦</b><span>Offline first</span><b>✦</b><span>Shipped fast</span><b>✦</b>
+        <span>Vibe coded</span><b>✦</b><span>Android native</span><b>✦</b><span>Progressive Web Apps</span><b>✦</b><span>Offline first</span><b>✦</b><span>Shipped fast</span><b>✦</b>
+      </div>
+    </div>
+
+    <!-- VIBE MACHINE (special touch) -->
+    <section class="section machine" id="machine">
+      <div class="section-head reveal">
+        <p class="kicker">00 / The Vibe Machine</p>
+        <h2>Type a vibe.<br><em>Watch it become an app.</em></h2>
+        <p class="lead">This is roughly how working with us feels — just slower, with more humans and a lot more polish.</p>
+      </div>
+
+      <div class="machine-grid reveal">
+        <div class="machine-left">
+          <form class="prompt" id="vibeForm" autocomplete="off">
+            <label for="vibeInput" class="prompt-label">&gt; describe your app idea</label>
+            <div class="prompt-row">
+              <input id="vibeInput" type="text" maxlength="80" placeholder="a calm habit tracker for night owls" required>
+              <button type="submit" class="btn btn-solid">Build</button>
+            </div>
+            <div class="chips" id="chips">
+              <button type="button">fitness coach with streaks</button>
+              <button type="button">recipe finder for students</button>
+              <button type="button">expense splitter for trips</button>
+              <button type="button">music practice timer</button>
+            </div>
+          </form>
+
+          <div class="terminal" aria-live="polite">
+            <div class="terminal-bar"><i></i><i></i><i></i><span>vibe-factory — build.log</span></div>
+            <pre id="buildLog"><span class="dim">$ waiting for a vibe…</span></pre>
+          </div>
+        </div>
+
+        <div class="machine-right">
+          <div class="phone" id="phone">
+            <div class="phone-notch"></div>
+            <div class="phone-screen" id="phoneScreen">
+              <div class="phone-status"><span>9:41</span><span>▮▮▮ ◔</span></div>
+              <div class="phone-idle">
+                <div class="idle-logo">V</div>
+                <p>Your app<br>appears here</p>
+              </div>
+            </div>
+          </div>
+          <div class="platform-tags">
+            <span>● Android APK</span><span>● Installable PWA</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section class="section" id="services">
+      <div class="section-head reveal">
+        <p class="kicker">01 / What we make</p>
+        <h2>Apps with a <em>pulse.</em></h2>
+      </div>
+
+      <div class="cards">
+        <article class="card reveal">
+          <span class="card-num">01</span>
+          <div class="card-icon">
+            <svg viewBox="0 0 48 48"><rect x="12" y="4" width="24" height="40" rx="5" fill="none" stroke="currentColor" stroke-width="3"/><circle cx="24" cy="37" r="2" fill="currentColor"/></svg>
+          </div>
+          <h3>Android Apps</h3>
+          <p>Smooth, Material-friendly Android apps built for real devices, published to Google Play with all the store paperwork handled.</p>
+          <ul><li>Kotlin / Flutter / React Native</li><li>Play Store release</li><li>Push, camera, sensors</li></ul>
+        </article>
+
+        <article class="card reveal">
+          <span class="card-num">02</span>
+          <div class="card-icon">
+            <svg viewBox="0 0 48 48"><circle cx="24" cy="24" r="19" fill="none" stroke="currentColor" stroke-width="3"/><path d="M5 24h38M24 5c6 6 6 32 0 38M24 5c-6 6-6 32 0 38" fill="none" stroke="currentColor" stroke-width="3"/></svg>
+          </div>
+          <h3>Progressive Web Apps</h3>
+          <p>One link, every device. Installable, offline-ready web apps that load instantly and skip the app store queue entirely.</p>
+          <ul><li>Offline &amp; service workers</li><li>Add to home screen</li><li>Lighthouse-tuned speed</li></ul>
+        </article>
+
+        <article class="card reveal">
+          <span class="card-num">03</span>
+          <div class="card-icon">
+            <svg viewBox="0 0 48 48"><path d="M8 14l10 10-10 10M22 36h18" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <h3>Vibe Coding Sprints</h3>
+          <p>AI-accelerated build sprints: you describe it, we prompt, review and refine until it's production-grade — not just a demo.</p>
+          <ul><li>Prototype in days</li><li>Human-reviewed code</li><li>Tests &amp; clean handover</li></ul>
+        </article>
+
+        <article class="card reveal">
+          <span class="card-num">04</span>
+          <div class="card-icon">
+            <svg viewBox="0 0 48 48"><path d="M24 4l5 14h15l-12 9 5 15-13-9-13 9 5-15L4 18h15z" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/></svg>
+          </div>
+          <h3>Design &amp; Launch</h3>
+          <p>UI/UX that feels intentional, branding that sticks, plus analytics, hosting and updates long after launch day.</p>
+          <ul><li>UI/UX &amp; prototyping</li><li>Hosting &amp; CI/CD</li><li>Care &amp; iteration plans</li></ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- PROCESS -->
+    <section class="section process" id="process">
+      <div class="section-head reveal">
+        <p class="kicker">02 / How it flows</p>
+        <h2>Four steps.<br><em>Zero drag.</em></h2>
+      </div>
+
+      <ol class="steps">
+        <li class="step reveal">
+          <span class="step-num">01</span>
+          <h3>Catch the vibe</h3>
+          <p>A short call to understand who it's for, what it should feel like and what "done" means.</p>
+        </li>
+        <li class="step reveal">
+          <span class="step-num">02</span>
+          <h3>Prompt &amp; prototype</h3>
+          <p>We vibe-code a clickable prototype fast, so you react to something real instead of a document.</p>
+        </li>
+        <li class="step reveal">
+          <span class="step-num">03</span>
+          <h3>Refine &amp; harden</h3>
+          <p>Humans review every line: performance, security, accessibility, tests. Vibes in, quality out.</p>
+        </li>
+        <li class="step reveal">
+          <span class="step-num">04</span>
+          <h3>Ship &amp; iterate</h3>
+          <p>Live on Google Play or the web, with analytics wired up and a loop for the next round of ideas.</p>
+        </li>
+      </ol>
+    </section>
+
+    <!-- COMPARE -->
+    <section class="section compare">
+      <div class="section-head reveal">
+        <p class="kicker">03 / Why Vibe Factory</p>
+        <h2>The old way <em>vs</em> the vibe way.</h2>
+      </div>
+      <div class="compare-grid reveal">
+        <div class="compare-col old">
+          <h3>Old way</h3>
+          <ul>
+            <li>Months of specs before a single screen</li>
+            <li>Separate teams for web and mobile</li>
+            <li>Big upfront budget, slow feedback</li>
+            <li>Launch, then silence</li>
+          </ul>
+        </div>
+        <div class="compare-col new">
+          <h3>Vibe way</h3>
+          <ul>
+            <li>A working prototype in your hand fast</li>
+            <li>Android + PWA from one focused team</li>
+            <li>Small sprints, constant feedback</li>
+            <li>Ship, measure, keep iterating</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section contact" id="contact">
+      <div class="contact-inner reveal">
+        <p class="kicker">04 / Let's build</p>
+        <h2 class="contact-title">Got a <span class="outline">vibe</span>?</h2>
+        <p class="lead">Tell us what you're dreaming up. We reply within one business day.</p>
+
+        <form class="contact-form" id="contactForm">
+          <div class="field">
+            <input id="cName" name="name" type="text" placeholder=" " required>
+            <label for="cName">Your name</label>
+          </div>
+          <div class="field">
+            <input id="cEmail" name="email" type="email" placeholder=" " required>
+            <label for="cEmail">Email</label>
+          </div>
+          <div class="field">
+            <select id="cType" name="type">
+              <option>Android app</option>
+              <option>Progressive Web App</option>
+              <option>Both</option>
+              <option>Not sure yet</option>
+            </select>
+            <label for="cType" class="static">I need</label>
+          </div>
+          <div class="field field-wide">
+            <textarea id="cMsg" name="message" rows="4" placeholder=" " required></textarea>
+            <label for="cMsg">The vibe (a few sentences is plenty)</label>
+          </div>
+          <button class="btn btn-solid btn-big magnetic" type="submit">Send the vibe →</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-big" aria-hidden="true">VIBE/FACTORY</div>
+    <div class="footer-row">
+      <span>© <span id="year"></span> Vibe Factory. Made with vibes &amp; rigor.</span>
+      <button class="btn btn-ghost btn-small" id="installBtn" hidden>⬇ Install this site</button>
+      <span class="footer-note">P.S. This website is itself a PWA.</span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
